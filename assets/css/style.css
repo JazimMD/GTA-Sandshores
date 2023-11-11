@@ -382,7 +382,10 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 /*-------------------------------------
         6. Works 
 --------------------------------------*/
-.works{padding: 0 0 90px;}
+.works{
+    padding: 0 0 90px;
+    background: #f8fafb;
+}
 .works-content {margin-top: 73px;}
 
 .single-how-works{
@@ -757,7 +760,6 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
         11. Subscribe
 --------------------------------------*/
 .subscription{
-    background: #f8fafb;
     padding:150px 0;
 }
 /*subscribe-title*/
