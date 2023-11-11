@@ -1,0 +1,38 @@
+#wrapper {
+    width: 920px;
+    height: auto;
+    margin: 0 auto;
+  }
+  #local-video {
+    width: 47.5%;
+    height: 300px;
+    float: left;
+    margin-right: 5%;
+  }
+  
+  #remote-video {
+    width: 47.5%;
+    height: 300px;
+    float: left;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  @media (max-width: 767px) {
+    #wrapper {
+      width: 100%;
+      height: auto;
+    }
+    #local-video {
+      width: 100%;
+      height: auto;
+      float: none;
+    }
+    #remote-video {
+      width: 100%;
+      height: auto;
+      float: none;
+    }
+  }
