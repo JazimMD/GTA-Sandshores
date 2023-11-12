@@ -52,7 +52,6 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
     </head>
 	
 	<body>
@@ -79,7 +78,6 @@
 					</div>
 				</li>
 			</ul>
-					
 		</header><!--/.header-top-->
 		<!--header-top end -->
 
@@ -182,7 +180,7 @@
 				</div><!--/.section-header-->
 				<div class="works-content">
 					<div class="row">
-						<div class="col-md-4 col-sm-6">
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 							<div class="single-how-works">
 								<div class="single-how-works-icon">
 									<i class="flaticon-lightbulb-idea"></i>
@@ -191,12 +189,15 @@
 								<p>
                                     Meet up virtually with a person and start interacting
 								</p>
-								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-                                    Select game
-								</button>
+                                <select class="welcome-hero-btn how-work-btn" style="text-align: center" id="meetup_dropdown">
+                                    <option value="1 v 1">1 v 1</option>
+                                    <option value="Rap Battle">Rap Battle</option>
+                                    <option value="Room with Spectators">Room with Spectators</option>
+                                </select>
+                                <button id="meetup">Submit</button>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6">
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-4col-md-4 col-sm-6">
 							<div class="single-how-works">
 								<div class="single-how-works-icon">
 									<i class="flaticon-networking"></i>
@@ -206,11 +207,11 @@
                                     Fast-paced clicker game for stress busting
 								</p>
 								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-                                    Play game
+                                    <a href="https://lucent-speculoos-2131a4.netlify.app/">Play game</a>
 								</button>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6">
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-4col-md-4 col-sm-6">
 							<div class="single-how-works">
 								<div class="single-how-works-icon">
 									<i class="flaticon-location-on-road"></i>
@@ -220,7 +221,21 @@
                                     Clickety clack clack!
 								</p>
 								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-                                    Start test
+                                    <a href="typing-test/index.html">Start test</a>
+								</button>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-4col-md-4 col-sm-6">
+							<div class="single-how-works">
+								<div class="single-how-works-icon">
+									<i class="flaticon-bulb"></i>
+								</div>
+								<h2><a href="#">QUIZ IT OUT</a></h2>
+								<p>
+                                    Fast-paced and interactive riddle-solving game
+								</p>
+								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+                                    <a href="">Play game</a>
 								</button>
 							</div>
 						</div>
@@ -291,5 +306,51 @@
         <script src="assets/js/custom.js"></script>
         
     </body>
-	
+    <script>
+        function meetupClick()
+        {
+            let dropdown = document.getElementById("meetup_dropdown");
+
+            var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+
+            const id = window.location.hash.substring(1);
+            if (selectedValue == '1 v 1')
+            {
+                if (id == "1")
+                {
+                    window.location.href = "file:///home/abhinand/Abhinand/code/hackathons/GTA-Sandshores/meetup/index.html#e1234";
+                }
+                else
+                {
+                    window.location.href = "file:///home/abhinand/Abhinand/code/hackathons/GTA-Sandshores/meetup/index.html#f1237";
+                }
+            }
+            else if (selectedValue == "Rap Battle")
+            {
+                if (id == "1")
+                {
+                    window.location.href = "https://google.com";
+                }
+                else
+                {
+                    window.location.href = "https://yahoo.com";
+                }
+            }
+            else
+            {
+                if (id == "1")
+                {
+                    window.location.href = "https://github.com";
+                }
+                else
+                {
+                    window.location.href = "https://youtube.com";
+                }
+            }
+        };
+
+        document.getElementById("meetup").onclick = () => {
+            meetupClick();
+        };
+        </script>
 </html>
