@@ -91,15 +91,15 @@
           remoteVideo.srcObject = remoteStream;
   
           // Code to execute after the call has been established
-          const result = separateCharacters(getFragmentIdentifier());
-          if (result.alphabet === "a") {
-            playaudio(Math.floor(Math.random() * 5) + 1);
-          }
-          if (result.alphabet === "c") {
-            playquiz(0);
-            startTimer();
-          }
         });
+        const result = separateCharacters(getFragmentIdentifier());
+        if (result.alphabet === "a") {
+          playaudio(Math.floor(Math.random() * 5) + 1);
+        }
+        if (result.alphabet === "c") {
+          playquiz(0);
+          startTimer();
+        }
       })
       .catch((error) => {
         console.error("Error getting user media:", error);
@@ -189,7 +189,7 @@
   
     var correctHtml = `
       <div>
-        <h2 id="question">correct answer: ${data.funnyRiddles[id].correct}</h2>
+        <h2 id="question">correct answer: ${correctanswer}</h2>
       </div>`;
     correct.innerHTML = correctHtml;
   }
